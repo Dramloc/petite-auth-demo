@@ -1,7 +1,5 @@
 import { authorize } from 'petite-auth';
 
-import { getAccessToken } from '../auth';
-
 function login() {
 	authorize('https://www.facebook.com/v2.11/dialog/oauth', {
 		client_id: process.env.FACEBOOK_CLIENT_ID,
@@ -11,16 +9,6 @@ function login() {
 	});
 }
 
-function getProfile() {
-	const accessToken = getAccessToken();
-	return fetch('https://graph.facebook.com/me', {
-		headers: {
-			Authorization: `Bearer ${accessToken}`
-		}
-	}).then(response => response.json());
-}
-
 export {
-	login,
-	getProfile
+	login
 };
