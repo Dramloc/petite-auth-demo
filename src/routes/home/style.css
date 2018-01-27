@@ -1,0 +1,57 @@
+.home {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.auth-button {
+	position: relative;
+	display: inline-block;
+	padding: 0 24px;
+	margin: 4px;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 4em;
+	letter-spacing: 0.07em;
+	color: #212121;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	border: 0;
+	border-radius: 3px;
+	will-change: backgroud-color;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.auth-button:hover, .auth-button:focus, .auth-button:active {
+	background-color: #bdbdbd;
+}
+
+.auth-button--auth0 {
+	color: #fff;
+	background-color: #eb5424;
+}
+
+.auth-button--auth0:hover, .auth-button--auth0:focus, .auth-button--auth0:active {
+	background-color: #ca3f12;
+}
+
+.auth-button--google {
+	color: #fff;
+	background-color: #4285f4;
+}
+
+.auth-button--google:hover, .auth-button--google:focus, .auth-button--google:active {
+	background-color: #2e5daa;
+}
+
+.auth-button--facebook {
+	color: #fff;
+	background-color: #3b5998;
+}
+
+.auth-button--facebook:hover, .auth-button--facebook:focus, .auth-button--facebook:active {
+	background-color: #293e6a;
+}
