@@ -1,34 +1,29 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 
-import { getProfile } from '../../lib/auth0';
+import { getAccessToken } from '../../lib/auth';
+import Fetch from '../fetch';
+import Spinner from '../spinner';
 
 import style from './style.css';
 
-export default class Profile extends Component {
-
-	state = {
-		profile: undefined
-	}
-
-	componentDidMount() {
-		return getProfile()
-			.then(profile => this.setState({ profile }));
-	}
-
-	render({ }, { profile }) {
-		return (
-			<div class={style.profile}>
-				{(profile !== undefined) ?
-					<div>
-						<div class={style.profile__picture} >
-							<img src={profile.picture} alt="profile" />
+export default function Profile() {
+	return (
+		<Fetch url={`https://${process.env.AUTH0_DOMAIN}/userinfo`} options={{ headers: { Authorization: `Bearer ${getAccessToken()}` } }}>
+			{({ loading, error, data }) => (
+				<div class={style.profile}>
+					{loading && <Spinner />}
+					{error && <p>{error.message}</p>}
+					{data &&
+						<div>
+							<div class={style.profile__picture} >
+								<img src={data.picture} alt="profile" />
+							</div>
+							<p class={style.profile__name}>{data.name}</p>
+							<p class={style.profile__nickname}>{data.nickname}</p>
 						</div>
-						<p class={style.profile__name}>{profile.name}</p>
-						<p class={style.profile__nickname}>{profile.nickname}</p>
-					</div> :
-					<p>Loading profile...</p>
-				}
-			</div >
-		);
-	}
+					}
+				</div>
+			)}
+		</Fetch>
+	);
 }
