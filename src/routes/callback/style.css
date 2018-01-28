@@ -1,8 +1,7 @@
-.callback {
-	display: flex;
-	padding: 56px 0;
-	min-height: 100%;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
+.callback__spinner {
+	position: absolute;
+	left: 50%;
+	margin-left: -18px;
+	top: 50%;
+	margin-top: -18px;
 }

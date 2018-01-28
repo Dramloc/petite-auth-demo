@@ -5,15 +5,14 @@ import { login as facebookLogin } from '../../lib/facebook';
 import { login as googleLogin } from '../../lib/google';
 import { logout, isAuthenticated } from '../../lib/auth';
 import Button from '../../components/button';
+import Page from '../../components/page';
 import Profile from '../../components/profile';
 
 import style from './style.css';
 
 export default function Home() {
 	return (
-		<div class={style.home}>
-			<h1>Home</h1>
-			<p>This is the Home component.</p>
+		<Page>
 			{isAuthenticated() ?
 				<div>
 					<Profile />
@@ -25,6 +24,6 @@ export default function Home() {
 					<Button class={style['button--facebook']} onClick={facebookLogin}>Login with Facebook</Button>
 				</div>
 			}
-		</div>
+		</Page>
 	);
 }

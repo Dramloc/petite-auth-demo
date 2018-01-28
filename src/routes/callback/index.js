@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 
 import { handleAuthentication } from '../../lib/auth';
+import Page from '../../components/page';
 import Spinner from '../../components/spinner';
 
 import style from './style.css';
@@ -12,9 +13,9 @@ export default class Callback extends Component {
 
 	render() {
 		return (
-			<div class={style.callback}>
-				<Spinner />
-			</div>
+			<Page>
+				<Spinner class={style.callback__spinner} />
+			</Page>
 		);
 	}
 }
