@@ -7,8 +7,29 @@ import Spinner from '../spinner';
 import style from './style.css';
 
 export default function Profile() {
+	const identityProvider = localStorage.getItem('identity_provider');
+	let url;
+	let getName;
+	let getPicture;
+	switch (identityProvider) {
+		case 'auth0':
+			url = `https://${process.env.AUTH0_DOMAIN}/userinfo`;
+			getName = data => data.name;
+			getPicture = data => data.picture;
+			break;
+		case 'google':
+			url = 'https://www.googleapis.com/plus/v1/people/me';
+			getName = data => data.displayName;
+			getPicture = data => data.image.url;
+			break;
+		case 'facebook':
+			url = 'https://graph.facebook.com/me';
+			getName = data => data.name;
+			getPicture = data => null;
+			break;
+	}
 	return (
-		<Fetch url={`https://${process.env.AUTH0_DOMAIN}/userinfo`} options={{ headers: { Authorization: `Bearer ${getAccessToken()}` } }}>
+		<Fetch url={url} options={{ headers: { Authorization: `Bearer ${getAccessToken()}` } }}>
 			{({ loading, error, data }) => (
 				<div class={style.profile}>
 					{loading && <Spinner />}
@@ -16,10 +37,9 @@ export default function Profile() {
 					{data &&
 						<div>
 							<div class={style.profile__picture} >
-								<img src={data.picture} alt="profile" />
+								<img src={getPicture(data)} alt="profile" />
 							</div>
-							<p class={style.profile__name}>{data.name}</p>
-							<p class={style.profile__nickname}>{data.nickname}</p>
+							<p class={style.profile__name}>{getName(data)}</p>
 						</div>
 					}
 				</div>
