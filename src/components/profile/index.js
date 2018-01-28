@@ -6,8 +6,7 @@ import Spinner from '../spinner';
 
 import style from './style.css';
 
-export default function Profile() {
-	const identityProvider = localStorage.getItem('identity_provider');
+export default function Profile({ identityProvider }) {
 	let url;
 	let getName;
 	let getPicture;
@@ -25,11 +24,11 @@ export default function Profile() {
 		case 'facebook':
 			url = 'https://graph.facebook.com/me';
 			getName = data => data.name;
-			getPicture = data => null;
+			getPicture = data => data.profile_pic;
 			break;
 	}
 	return (
-		<Fetch url={url} options={{ headers: { Authorization: `Bearer ${getAccessToken()}` } }}>
+		<Fetch url={url} options={{ headers: { Authorization: `Bearer ${getAccessToken(identityProvider)}` } }}>
 			{({ loading, error, data }) => (
 				<div class={style.profile}>
 					{loading && <Spinner />}
