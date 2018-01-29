@@ -4,6 +4,7 @@ import { Router } from 'preact-router';
 import Callback from '../routes/callback';
 import Header from './header';
 import Home from '../routes/home';
+import PrivacyPolicy from '../routes/privacy-policy';
 
 export default function App() {
 	return (
@@ -13,6 +14,7 @@ export default function App() {
 			<Router>
 				<Home path="/" />
 				<Callback path="/callback" />
+				<PrivacyPolicy path="/privacy-policy" />
 			</Router>
 		</div>
 	);
