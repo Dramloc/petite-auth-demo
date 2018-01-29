@@ -2524,7 +2524,7 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-synacor@^2.0.2:
+eslint-config-synacor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-synacor/-/eslint-config-synacor-2.1.0.tgz#8ade304436b79a02ac2b8858b72cf3aefbc5c38c"
   dependencies:
@@ -2569,7 +2569,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.5.0:
+eslint@^4.16.0:
   version "4.16.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.16.0.tgz#934ada9e98715e1d7bbfd6f6f0519ed2fab35cc1"
   dependencies:
@@ -3640,9 +3640,9 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-if-env@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/if-env/-/if-env-1.0.0.tgz#6e09082cdd3f2ccfb75baf022a4a971565f6007c"
+if-env@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/if-env/-/if-env-1.0.4.tgz#8b2b6bd308af86a3a19bb273426761085104878b"
   dependencies:
     npm-run-all "1.4.0"
 
@@ -5248,7 +5248,7 @@ persist-path@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/persist-path/-/persist-path-1.0.2.tgz#b7b9475365b5ccf038aafa55af12b0dd8c418d7a"
 
-petite-auth@^1.0.0:
+petite-auth@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/petite-auth/-/petite-auth-1.0.1.tgz#387fbf957b0ebfbb16ca30be2a47a779994de812"
 
@@ -5584,7 +5584,7 @@ postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.16, postcss@^6.0.2:
     source-map "^0.6.1"
     supports-color "^5.1.0"
 
-preact-cli@^2.0.0:
+preact-cli@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/preact-cli/-/preact-cli-2.1.1.tgz#fbdf269d625f1a4d9b8782498ed9181546ea9153"
   dependencies:
@@ -5655,7 +5655,7 @@ preact-cli@^2.0.0:
     which "^1.2.14"
     yargs "^8.0.1"
 
-preact-compat@^3.14.3, preact-compat@^3.17.0:
+preact-compat@^3.14.3, preact-compat@^3.18.0:
   version "3.18.0"
   resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.18.0.tgz#ca430cc1f67193fb9feaf7c510832957b2ebe701"
   dependencies:
@@ -5679,7 +5679,7 @@ preact-render-to-string@^3.6.0:
   dependencies:
     pretty-format "^3.5.1"
 
-preact-router@^2.5.2, preact-router@^2.5.5:
+preact-router@^2.5.2, preact-router@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/preact-router/-/preact-router-2.6.0.tgz#55f7fbc84e6b8af0df3ea04c8ce4c268714089b6"
 
@@ -5691,7 +5691,7 @@ preact-transition-group@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/preact-transition-group/-/preact-transition-group-1.1.1.tgz#f0a49327ea515ece34ea2be864c4a7d29e5d6e10"
 
-preact@^8.1.0, preact@^8.2.1:
+preact@^8.1.0, preact@^8.2.7:
   version "8.2.7"
   resolved "https://registry.yarnpkg.com/preact/-/preact-8.2.7.tgz#316249fb678cd5e93e7cee63cea7bfb62dbd6814"
 
