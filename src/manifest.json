@@ -1,6 +1,6 @@
 {
-  "name": "petite-auth",
-  "short_name": "petite-auth",
+  "name": "Petite · Auth",
+  "short_name": "Petite · Auth",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
