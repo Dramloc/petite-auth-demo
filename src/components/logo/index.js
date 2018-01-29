@@ -24,9 +24,18 @@ export default class Logo extends Component {
 
 	componentDidMount() {
 		const boundingClientRect = this.container.getBoundingClientRect();
-		this.canvas.width = boundingClientRect.width;
-		this.canvas.height = boundingClientRect.height;
+		const devicePixelRatio = window.devicePixelRatio || 1;
 		this.context = this.canvas.getContext('2d');
+		const backingStoreRatio = this.context.webkitBackingStorePixelRatio ||
+			this.context.mozBackingStorePixelRatio ||
+			this.context.msBackingStorePixelRatio ||
+			this.context.oBackingStorePixelRatio ||
+			this.context.backingStorePixelRatio || 1;
+		const ratio = devicePixelRatio / backingStoreRatio;
+		this.canvas.width = boundingClientRect.width * ratio;
+		this.canvas.height = boundingClientRect.height * ratio;
+		this.canvas.style.width = `${boundingClientRect.width}px`;
+		this.canvas.style.height = `${boundingClientRect.height}px`;
 		this.context.fillStyle = '#FF5722';
 		requestAnimationFrame(this.update);
 	}
