@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import Helmet from 'preact-helmet';
 
 import { login as auth0Login } from '../../lib/auth0';
 import { login as facebookLogin } from '../../lib/facebook';
@@ -14,6 +15,7 @@ import style from './style.css';
 export default function Home() {
 	return (
 		<Page class={style.home}>
+			<Helmet title="Petite · Auth" />
 			<div class={style.home__header}>
 				<h1>Petite · Auth</h1>
 				<Logo class={style.home__logo} />
