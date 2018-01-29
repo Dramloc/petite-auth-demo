@@ -11,7 +11,6 @@ export default function App() {
 	return (
 		<div id="app">
 			<Helmet link={[{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500' }]} />
-			<link rel="stylesheet" href="" />
 			<Header />
 			<Router>
 				<Home path="/" />
