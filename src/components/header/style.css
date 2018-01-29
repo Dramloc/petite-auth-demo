@@ -23,7 +23,7 @@
 	max-width: 100%;
 }
 
-.header a {
+.link {
 	float: left;
 	height: 56px;
 	margin: 0;
@@ -33,5 +33,9 @@
 	text-transform: uppercase;
 	color: #333;
 	text-decoration: none;
+	margin-right: 16px;
+}
+
+.link--active {
 	border-bottom: 3px solid #FF3D00;
 }

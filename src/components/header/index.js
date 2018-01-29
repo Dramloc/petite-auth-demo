@@ -7,8 +7,8 @@ import style from './style.css';
 export default function Header() {
 	return (
 		<header class={style.header}>
-			<Logo class={style.header__logo} />
-			<Link href="/">petite &middot; auth</Link>
+			<Link href="/"><Logo class={style.header__logo} /></Link>
+			<Link href="/" class={style.link} activeClassName={style['link--active']}>petite &middot; auth</Link>
 		</header>
 	);
 }
