@@ -9,6 +9,9 @@ export default class Logo extends Component {
 	context = undefined;
 
 	update = () => {
+		if (!this.canvas) {
+			return;
+		}
 		const time = Date.now() / 1000 / 128;
 		const width = 3;
 		const height = 3;
