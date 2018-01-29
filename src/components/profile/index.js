@@ -22,9 +22,9 @@ export default function Profile({ identityProvider }) {
 			getPicture = data => data.image.url;
 			break;
 		case 'facebook':
-			url = 'https://graph.facebook.com/me';
+			url = 'https://graph.facebook.com/me?fields=id,name,picture';
 			getName = data => data.name;
-			getPicture = data => data.profile_pic;
+			getPicture = data => data.picture.data.url;
 			break;
 	}
 	return (
