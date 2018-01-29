@@ -15,7 +15,7 @@ export default function Home() {
 	return (
 		<Page class={style.home}>
 			<div class={style.home__header}>
-				<h1>petite &middot; auth</h1>
+				<h1>Petite · Auth</h1>
 				<Logo class={style.home__logo} />
 			</div>
 			<p>🔒 Tiny (520B) JavaScript OAuth2 client</p>
