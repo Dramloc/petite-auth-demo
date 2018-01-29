@@ -11,7 +11,21 @@
 	z-index: 50;
 }
 
+.header__logo {
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin: 10px 12px 0 0;
+}
+
+.header__logo img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
 .header a {
+	float: left;
+	height: 56px;
 	margin: 0;
 	font-size: 12px;
 	line-height: 56px;
@@ -19,4 +33,5 @@
 	text-transform: uppercase;
 	color: #333;
 	text-decoration: none;
+	border-bottom: 3px solid #FF3D00;
 }

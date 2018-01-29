@@ -5,6 +5,7 @@ import { login as facebookLogin } from '../../lib/facebook';
 import { login as googleLogin } from '../../lib/google';
 import { logout, isAuthenticated } from '../../lib/auth';
 import Button from '../../components/button';
+import Logo from '../../components/logo';
 import Page from '../../components/page';
 import Profile from '../../components/profile';
 
@@ -13,7 +14,10 @@ import style from './style.css';
 export default function Home() {
 	return (
 		<Page class={style.home}>
-			<h1>petite &middot; auth</h1>
+			<div class={style.home__header}>
+				<h1>petite &middot; auth</h1>
+				<Logo class={style.home__logo} />
+			</div>
 			<p>🔒 Tiny (520B) JavaScript OAuth2 client</p>
 
 			<h2>Try it!</h2>
