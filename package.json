@@ -7,7 +7,7 @@
 		"start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
 		"build": "preact build",
 		"serve": "preact build && preact serve",
-		"deploy": "cross-env NODE_ENV=production preact build && surge ./build --domain https://petite-auth.surge.sh",
+		"deploy": "cross-env NODE_ENV=production preact build && cp build/index.html build/200.html && surge build --domain https://petite-auth.surge.sh",
 		"dev": "preact watch",
 		"lint": "eslint src"
 	},
