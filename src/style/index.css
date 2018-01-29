@@ -42,3 +42,12 @@ h3 {
 	line-height: 32px;
 	margin: 1rem 0;
 }
+
+a {
+	color: #FF3D00;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid #e0e0e0;
+}
