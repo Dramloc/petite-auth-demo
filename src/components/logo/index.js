@@ -25,7 +25,6 @@ export default class Logo extends Component {
 	componentDidMount() {
 		const boundingClientRect = this.container.getBoundingClientRect();
 		const devicePixelRatio = window.devicePixelRatio || 1;
-		this.context = this.canvas.getContext('2d');
 		const backingStoreRatio = this.context.webkitBackingStorePixelRatio ||
 			this.context.mozBackingStorePixelRatio ||
 			this.context.msBackingStorePixelRatio ||
@@ -43,7 +42,7 @@ export default class Logo extends Component {
 	render({ class: className, ...props }) {
 		return (
 			<div ref={container => this.container = container} class={classNames(style.logo, className)} {...props}>
-				<canvas ref={canvas => this.canvas = canvas} />
+				<canvas ref={canvas => (this.canvas = canvas, this.context = canvas ? canvas.getContext('2d') : null)} />
 			</div>
 		);
 	}
