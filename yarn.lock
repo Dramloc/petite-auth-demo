@@ -5248,9 +5248,9 @@ persist-path@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/persist-path/-/persist-path-1.0.2.tgz#b7b9475365b5ccf038aafa55af12b0dd8c418d7a"
 
-petite-auth@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/petite-auth/-/petite-auth-1.0.1.tgz#387fbf957b0ebfbb16ca30be2a47a779994de812"
+petite-auth@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/petite-auth/-/petite-auth-1.0.3.tgz#381778c620c0284ccabf72271bfc375627357f82"
 
 pify@^2.0.0:
   version "2.3.0"
