@@ -20,7 +20,9 @@ export default function Home() {
 				<h1>Petite · Auth</h1>
 				<Logo class={style.home__logo} />
 			</div>
-			<p>🔒 Tiny (520B) JavaScript OAuth2 client</p>
+			<p>🔒 Tiny (429B) JavaScript OAuth2 client</p>
+
+			<Button class={style['button--getting-started']} href="https://github.com/Dramloc/petite-auth">Getting started</Button>
 
 			<h2>Try it!</h2>
 			<h3>Auth0</h3>

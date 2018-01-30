@@ -2,13 +2,16 @@
 	position: relative;
 	display: inline-block;
 	padding: 0;
-	margin: 4px;
+	margin: 0;
+	font-family: 'Roboto', 'Helvetica Neue', arial, sans-serif;
 	font-size: 10px;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 4em;
 	letter-spacing: 0.07em;
 	color: #212121;
+	background-color: #e0e0e0;
 	text-transform: uppercase;
+	text-decoration: none;
 	cursor: pointer;
 	outline: none;
 	user-select: none;
