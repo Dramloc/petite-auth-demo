@@ -20,7 +20,7 @@ export default function (config, env, helpers) {
 				env: {
 					AUTH0_DOMAIN: JSON.stringify('petite-auth.auth0.com'),
 					AUTH0_CLIENT_ID: JSON.stringify('nCeCLL3DQ6IjDDovV30cbgyyWPd3akZ4'),
-					GOOGLE_CLIENT_ID: JSON.stringify('934399699312-niohk8v1b3bktl58n2ovuf9kmnbmkdai.apps.googleusercontent.com'),
+					GOOGLE_CLIENT_ID: JSON.stringify('608887938376-t27q2le7q6krpt75rflcf2l9ckk24mql.apps.googleusercontent.com'),
 					FACEBOOK_CLIENT_ID: JSON.stringify('2023835517832584'),
 					CALLBACK_URL: JSON.stringify(callbackUrl)
 				}
